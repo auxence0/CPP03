@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/22 11:53:17 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/12 14:22:29 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/14 12:28:14 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	ClapTrap {
 		void		attack( const std::string& target );
 		void		takeDamage( unsigned int amount );
 		void		beRepaired( unsigned int amount );
-	private:
+	protected:
 		std::string	name_;
 		int			hit_points_;
 		int			energy_points_;

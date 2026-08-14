@@ -6,38 +6,46 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:11:21 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/12 14:48:14 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/14 12:41:02 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	ClapTrap	x ( "tendancieux" );
-	ClapTrap	y ( "tandori" );
-	ClapTrap	z ( "Peripetie" );
+    std::cout << "\nTest Constructor\n" << std::endl;
 
-	std::cout << "\n\nSimple test\n\n";
-	x.attack("tandori");
-	y.takeDamage(4);
-	y.beRepaired(15);
+    ScavTrap s1("Salim");
+    ScavTrap s2("Louis");
 
-	y.attack("Peripetie");
-	z.takeDamage(100);
+    std::cout << "\n### ATTACK USING ScavTrap func ###\n" << std::endl;
 
-	std::cout << "\n\nLose all energy points\n\n";
-	for (int i = 0; i < 10; ++i) {
-		z.beRepaired(10);
-	}
-	z.attack("failed");
+    s1.attack("Louis");
+    s1.takeDamage(20);
 
-	std::cout << "\n\nCpy constructor and assignement test\n\n";
-	ClapTrap	cpy_construct(y);
-	ClapTrap	celuila("ici");
+    s2.attack("Salim");
+    s2.takeDamage(20);
 
-	celuila = cpy_construct;
+    std::cout << "\n### ATTACK USING ScavTrap and DEATH ###\n" << std::endl;
 
-	celuila.attack("Mr Biasoni");
+    s1.takeDamage(100);
+    s1.takeDamage(1);
+    s1.attack ("Louis");
+    s1.beRepaired(10);
+    s2.beRepaired(10);
 
-	return 0;
+    std::cout << "\n### NO MORE ENERGY ###\n" << std::endl;
+
+    ScavTrap s3("Manceau");
+    for (int i = 0; i < 50; i++){
+        s3.attack("une vody");
+    }
+
+    std::cout << "\n ### No more energy let's try to do smth ###" << std::endl;
+    s3.attack("une poubelle");
+    s3.beRepaired(10);
+    s3.guardGate();
+
+    std::cout << "\n### DESTRUCTOR PART ###\n" << std::endl;
+
 }

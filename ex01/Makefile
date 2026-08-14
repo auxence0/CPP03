@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/12 14:41:39 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/14 12:30:42 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = CpapTrap
 
 SRCS = main.cpp \
-	   ClapTrap.cpp
+	   ClapTrap.cpp \
+	   ScavTrap.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 
