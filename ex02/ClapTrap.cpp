@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 12:06:13 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 12:36:35 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/14 15:14:23 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,15 @@ ClapTrap&	ClapTrap::operator=( const ClapTrap& rhs ) {
 }
 
 void	ClapTrap::attack( const std::string& target) {
-	if (energy_points_ > 0) {
-		std::cout << "(ClapTrap) " + name_ + " attacks " + target + ", causing " << attack_damage_ << " points of damage!\n";
-		energy_points_--;
+	if (hit_points_ == 0 || energy_points_ == 0) {
+		if (hit_points_ == 0)
+			std::cout << "No more health point\n";
+		if (energy_points_ == 0)
+			std::cout << "No more energy points\n";
+		return ;
 	}
-	else
-		std::cout << "Need energy point\n";
+	std::cout << "(ClapTrap) " + name_ + " attacks " + target + ", causing " << attack_damage_ << " points of damage!\n";
+	energy_points_--;
 	return ;
 }
 
