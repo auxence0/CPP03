@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 16:05:47 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/17 17:02:46 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/17 17:20:13 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,17 @@ DiamondTrap::~DiamondTrap () {
 	return ;
 }
 
+DiamondTrap&	DiamondTrap::operator= ( const DiamondTrap& rhs ) {
+	
+}
+
 void	DiamondTrap::attack ( const std::string& target ) {
 	ScavTrap::attack (target);
+	return ;
+}
+
+void	DiamondTrap::whoAmI (void) {
+	std::cout << "DiamondTrap " + name_ + "\n";
+	std::cout << "ClapTrap " + ClapTrap::name_ + "\n";
 	return ;
 }

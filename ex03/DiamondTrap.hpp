@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 16:06:03 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/17 17:01:14 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/17 17:18:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	DiamondTrap: public ScavTrap, public FragTrap{
 		~DiamondTrap();
 		DiamondTrap&	operator=( const DiamondTrap& rhs );
 		void	attack( const std::string& target );
-		void	whoAmi();
+		void	whoAmI();
 	private:
 		std::string	name_;
 		int			hit_points_;
