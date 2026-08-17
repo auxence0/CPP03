@@ -6,20 +6,19 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:11:21 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 14:49:22 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/17 17:02:01 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void) {
     std::cout << "\nTest Constructor\n" << std::endl;
 
-    FragTrap s1("pileur");
-    FragTrap s2("semblable");
+    DiamondTrap s1("pileur");
+    DiamondTrap s2("semblable");
 
-    std::cout << "\nTest FragTrap\n" << std::endl;
+    std::cout << "\nTest DiamondTrap\n" << std::endl;
 
     s1.attack("semblable");
     s1.takeDamage(20);
@@ -27,7 +26,7 @@ int	main(void) {
     s2.attack("pileur");
     s2.takeDamage(20);
 
-    std::cout << "\nTest FragTrap and DEATH\n" << std::endl;
+    std::cout << "\nTest DiamondTrap and DEATH\n" << std::endl;
 
     s1.takeDamage(100);
     s1.takeDamage(1);
@@ -37,7 +36,7 @@ int	main(void) {
 
     std::cout << "\nBurn of all the energy\n" << std::endl;
 
-    FragTrap s3("Manceau");
+    DiamondTrap s3("Manceau");
     for (int i = 0; i < 100; i++){
         s3.attack("une vody");
     }

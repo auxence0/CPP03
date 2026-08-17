@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 14:27:50 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 14:45:17 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/17 15:30:10 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	FragTrap: public ClapTrap {
+class	FragTrap: virtual public ClapTrap {
 	public:
 		FragTrap( std::string name );
 		FragTrap( const FragTrap& obj );
