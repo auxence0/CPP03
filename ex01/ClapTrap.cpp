@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 12:06:13 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 15:13:27 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/19 12:07:50 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ ClapTrap&	ClapTrap::operator=( const ClapTrap& rhs ) {
 void	ClapTrap::attack( const std::string& target) {
 	if (hit_points_ == 0 || energy_points_ == 0) {
 		if (hit_points_ == 0)
-			std::cout << "No more health point\n";
-		if (energy_points_ == 0)
-			std::cout << "No more energy points\n";
+			std::cout << "(ClapTrap) " + name_ + "is dead\n";
+		else if (energy_points_ == 0)
+			std::cout << "(ClapTrap) " + name_ + " no more energy points\n";
 		return ;
 	}
 	std::cout << "(ClapTrap) " + name_ + " attacks " + target + ", causing " << attack_damage_ << " points of damage!\n";
@@ -50,20 +50,26 @@ void	ClapTrap::attack( const std::string& target) {
 }
 
 void	ClapTrap::takeDamage( unsigned int amount ) {
-	std::cout << "(ClapTrap) " + name_ + " took " << amount << " damage ";
-	hit_points_ -= amount;
-	if (hit_points_ < 0)
-		hit_points_ = 0;
-	std::cout << "He's now at " << hit_points_ << "\n";
+	if (hit_points_ == 0)
+		std::cout << "(ClapTrap) " + name_ + " is dead\n";
+	else {
+		std::cout << "(ClapTrap) " + name_ + " took " << amount << " damage ";
+		hit_points_ -= amount;
+		if (hit_points_ < 0)
+			hit_points_ = 0;
+		std::cout << "He's now at " << hit_points_ << "\n";
+	}
 	return ;
 }
 
 void	ClapTrap::beRepaired( unsigned int amount ) {
-	if (energy_points_ > 0) {
+	if (hit_points_ == 0)
+		std::cout << "(ClapTrap) " + name_ + " is dead\n";
+	else if (energy_points_ > 0) {
 		std::cout << "(ClapTrap) " + name_ + " gained " << amount << " hit points\n";
 		energy_points_--;
 	}
 	else
-		std::cout << "Need energy point\n";
+		std::cout << "(ClapTrap) " + name_ + " no more energy point\n";
 	return ;
 }
