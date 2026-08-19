@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:10 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 15:13:54 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/19 10:53:07 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ ScavTrap::ScavTrap ( const ScavTrap& obj): ClapTrap(obj){
 ScavTrap::~ScavTrap() {
 	std::cout << "Destructor ScavTrap called\n";
 	return ;
+}
+
+ScavTrap&	ScavTrap::operator= ( const ScavTrap& rhs ) {
+	this->hit_points_ = rhs.hit_points_;
+	this->attack_damage_ = rhs.attack_damage_;
+	this->energy_points_ = rhs.energy_points_;
+	this->hit_points_ = rhs.hit_points_;
+	return *this;
 }
 
 void	ScavTrap::guardGate() {
