@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:51:47 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 14:59:14 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/19 11:01:18 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ class	ScavTrap: public ClapTrap {
 		ScavTrap&	operator=( const ScavTrap& rhs );
 		void	attack( const std::string& target );
 		void	guardGate();
-	private:
-		
 };
 
 #endif

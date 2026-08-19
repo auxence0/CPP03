@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:10 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/19 10:55:55 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/19 11:23:02 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ ScavTrap::ScavTrap( std::string name ): ClapTrap(name){
 
 ScavTrap::ScavTrap ( const ScavTrap& obj): ClapTrap(obj){
 	std::cout << "Copy constructor ScavTrap called\n";
+	*this = obj;
 	return ;
 }
 
@@ -34,7 +35,7 @@ ScavTrap&	ScavTrap::operator= ( const ScavTrap& rhs ) {
 	this->hit_points_ = rhs.hit_points_;
 	this->attack_damage_ = rhs.attack_damage_;
 	this->energy_points_ = rhs.energy_points_;
-	this->hit_points_ = rhs.hit_points_;
+	this->name_ = rhs.name_;
 	return *this;
 }
 

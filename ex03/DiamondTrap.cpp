@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 16:05:47 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/17 17:20:13 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/19 11:22:32 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_clap_name"), Sca
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap& obj): ClapTrap(obj), ScavTrap(obj), FragTrap(obj){
+	*this = obj;
 	std::cout << "Copy Constructor DiamondTrap called;";
 	return ;
 }
@@ -31,7 +32,12 @@ DiamondTrap::~DiamondTrap () {
 }
 
 DiamondTrap&	DiamondTrap::operator= ( const DiamondTrap& rhs ) {
-	
+	ClapTrap::name_ = rhs.name_ + "_clap_name_";
+	this->name_ = rhs.name_;
+	this->hit_points_ = rhs.hit_points_;
+	this->attack_damage_ = rhs.attack_damage_;
+	this->energy_points_ = rhs.energy_points_;
+	return *this;
 }
 
 void	DiamondTrap::attack ( const std::string& target ) {
