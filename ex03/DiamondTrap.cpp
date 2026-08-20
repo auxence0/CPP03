@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 16:05:47 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/20 10:56:49 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:15:48 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_clap_name"), Sca
 
 DiamondTrap::DiamondTrap( const DiamondTrap& obj): ClapTrap(obj), ScavTrap(obj), FragTrap(obj){
 	*this = obj;
-	std::cout << "Copy Constructor DiamondTrap called;";
+	std::cout << "Copy Constructor DiamondTrap called\n";
 	return ;
 }
 
@@ -54,7 +54,7 @@ void	DiamondTrap::attack ( const std::string& target ) {
 }
 
 void	DiamondTrap::whoAmI (void) {
-	std::cout << "DiamondTrap " + name_ + "\n";
-	std::cout << "ClapTrap " + ClapTrap::name_ + "\n";
+	std::cout << "DiamondTrap " << name_ << "\n";
+	std::cout << "ClapTrap " << ClapTrap::name_ << "\n";
 	return ;
 }

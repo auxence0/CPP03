@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:10 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/20 10:57:53 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:16:40 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ void	ScavTrap::guardGate() {
 void	ScavTrap::attack( const std::string& target ) {
 	if (hit_points_ == 0 || energy_points_ == 0) {
 		if (hit_points_ == 0)
-			std::cout << "(ScavTrap) " + name_ + " is dead\n";
+			std::cout << "(ScavTrap) " << name_ << " is dead\n";
 		if (energy_points_ == 0)
-			std::cout << "(ScavTrap) " + name_ + " no more energy points\n";
+			std::cout << "(ScavTrap) " << name_ << " no more energy points\n";
 		return ;
 	}
-	std::cout << "(ScavTrap) " + name_ + " attacks " + target + ", causing " << attack_damage_ << " points of damage!\n";
+	std::cout << "(ScavTrap) " << name_ << " attacks " << target << ", causing " << attack_damage_ << " points of damage!\n";
 	energy_points_--;
 	return ;
 }
