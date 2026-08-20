@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:51:47 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/19 12:06:07 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:57:39 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 class	ScavTrap: virtual public ClapTrap {
 	public:
+		ScavTrap();
 		ScavTrap( std::string name );
 		ScavTrap( const ScavTrap& obj );
 		~ScavTrap();

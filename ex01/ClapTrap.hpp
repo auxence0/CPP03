@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/22 11:53:17 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 12:28:14 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:51:11 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class	ClapTrap {
 	public:
+		ClapTrap();
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap& obj );
 		~ClapTrap();

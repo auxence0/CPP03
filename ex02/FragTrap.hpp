@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 14:27:50 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 14:45:17 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:53:16 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 class	FragTrap: public ClapTrap {
 	public:
+		FragTrap();
 		FragTrap( std::string name );
 		FragTrap( const FragTrap& obj );
 		~FragTrap();

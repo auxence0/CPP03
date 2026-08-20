@@ -6,11 +6,19 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:10 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/19 11:45:27 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:52:53 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap():ClapTrap("Default"){
+	hit_points_ = 100;
+	energy_points_ = 50;
+	attack_damage_ = 20;
+	std::cout << "Default Constructor ScavTrap called\n";
+	return ;	
+}
 
 ScavTrap::ScavTrap( std::string name ): ClapTrap(name){
 	hit_points_ = 100;
