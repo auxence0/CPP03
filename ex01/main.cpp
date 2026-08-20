@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:11:21 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/14 14:49:39 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:04:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void) {
 
     ScavTrap s3("Manceau");
     for (int i = 0; i < 50; i++){
-        s3.attack("une vody");
+        s3.attack("Colombes");
     }
 
     std::cout << "\nNo more energy" << std::endl;
